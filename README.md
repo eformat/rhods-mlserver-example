@@ -81,13 +81,13 @@ Create a custom mlserver for sklearn model using MLFlow and RHODS.
 
     model_name: "linear-regression__isvc-565bc5d323"
     outputs {
-    name: "predict"
-    datatype: "FP64"
-    shape: 1
-    shape: 1
-    contents {
+      name: "predict"
+      datatype: "FP64"
+      shape: 1
+      shape: 1
+      contents {
         fp64_contents: 4.9175517014573042
-    }
+      }
     }
     ```
 
@@ -95,4 +95,3 @@ Create a custom mlserver for sklearn model using MLFlow and RHODS.
 
 - [How to Create a Custom Serving Runtime in KServe ModelMesh to Serve Your Models](https://www.youtube.com/watch?v=VLXjIGRb3yU)
 - [ODH ModelMesh Runtimes](https://github.com/opendatahub-io/odh-manifests/blob/master/model-mesh/runtimes/mlserver-0.x.yaml)
-
