@@ -1,4 +1,4 @@
-# RHODS - Custom Serving Runtimes
+# RHODS/ODH - Custom Serving Runtimes
 
 Create a custom mlserver for sklearn model using MLFlow and RHODS.
 
@@ -14,7 +14,7 @@ Create a custom mlserver for sklearn model using MLFlow and RHODS.
 
 5. Create S3 secret for minio with creds under demo RHODS project
 
-6. Create a new `ServingRuntime` in the `demo` namespace.
+6. Create a new `ServingRuntime` in the `demo` namespace. See [here](https://github.com/red-hat-data-services/odh-model-controller/blob/main/config/manager/servingruntimes_config.yaml) for the source code.
 
     ```bash
     oc -n demo apply -f serving-runtime-mlserver.yaml
@@ -77,9 +77,9 @@ Create a custom mlserver for sklearn model using MLFlow and RHODS.
     Make request
 
     ```bash
-    python3.11 grpc-request.py
+    python3.11 grpc-request.py --modelname testmodel-v1
 
-    model_name: "linear-regression__isvc-565bc5d323"
+    model_name: "testmodel-v1__isvc-565bc5d323"
     outputs {
       name: "predict"
       datatype: "FP64"
